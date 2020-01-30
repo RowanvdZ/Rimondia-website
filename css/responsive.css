@@ -2,11 +2,65 @@
     Version: 1.0
 /****************************************** */
 
+@media (min-width: 1199px){
+	.rimondia-style-box{
+        background-color: rgba(109, 24, 116, 0.8); 
+		padding: 30px;
+		position: relative;
+		margin: 0px 400px 0px 400px;
+    }
 
+    .container-fluid {
+        padding-right: 300px;
+        padding-left: 300px;
+        margin-right: auto;
+        margin-left: auto;
+	  }
+	  
+	  .container {
+		  width: auto;
+	  }
+     }
+
+	html, body {
+		height: 90%;
+	}
+		.big-tagline h2 {
+			font-size: 50px;
+		}
+		.top-navbar .navbar-light .navbar-nav .nav-link {
+			font-size: 16px;
+		}
+		.top-navbar .bg-light {
+			padding-top: 0px; 
+			padding-bottom: 0px;
+		}
+
+		.first-section .big-tagline a  {
+			padding: 8px 20px;
+		}
+
+		.first-section .lead {
+			font-size: 18px;
+		}
+		.rimondia-style-box {
+			padding: 20px;
+		}
+
+		.carousel-inner {
+			height: 80%;
+		}
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	.top-navbar .navbar-light .navbar-nav .nav-item{
 		margin: 0px 5px;
 	}
+	.container-fluid {
+        padding-right: 50px;
+        padding-left: 50px;
+        margin-right: auto;
+        margin-left: auto;
+      }
 }
 @media (min-width: 768px) and (max-width: 991px) {
 	.top-navbar .navbar-light .navbar-nav .nav-item{
@@ -79,6 +133,21 @@
 	}
 }
 @media (max-width: 767px) {
+
+	.box-slider .carousel-control-next{
+		display: none;
+		}
+	
+		.box-slider .carousel-control-prev{
+			display: none;
+			}
+	
+			.rimondia-style-box{
+				background-color: rgba(111, 48, 105, 0.8); 
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-right: 0px;
+			}
 	.top-navbar .navbar-light .navbar-nav .nav-item{
 		padding: 0px;
 	}

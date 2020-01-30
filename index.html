@@ -32,10 +32,10 @@
 <!-- Modernizer for Portfolio -->
 <script src="js/modernizer.js"></script>
 
-<!--[if lt IE 9]>
+<!-- [if lt IE 9]> -->
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- <![endif] -->
 
 </head>
 
@@ -69,7 +69,7 @@
                 <div class="collapse navbar-collapse" id="navbars-host">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active"><a class="nav-link nav-link-ltr" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="about.html">Over ons</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="#over-onss">Over ons</a></li>
                         <li class="nav-item"><a class="nav-link nav-link-ltr" href="features.html">Monstername </a></li>
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Hosting
@@ -96,7 +96,8 @@
     <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel"
         data-pause="hover" data-interval="false">
         <!-- Indicators -->
-        <ol class="carousel-indicators">
+        
+        <ol id="over-onss"class="carousel-indicators">
             <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleControls" data-slide-to="1"></li>
             <li data-target="#carouselExampleControls" data-slide-to="2"></li>
@@ -104,8 +105,8 @@
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
                 <div id="home" class="first-section" style="background-image:url('images/busjes_rimondia.png');">
-                    <div class="dtab">
-                        <div class="container rimondia-style-box" <div class="row">
+                    <div class="dtab" style="z-index: 1213;">
+                        <div class="container rimondia-style-box "><div class="row">
                             <div class="col-md-12 col-sm-12 ">
                                 <div class="big-tagline">
                                     <h2>Rimondia B.V.</h2>
@@ -117,11 +118,12 @@
                                     <a href="#" class="hover-btn-new"><span>Over ons</span></a>
                                 </div>
                             </div>
-                        </div><!-- end row -->
+                        </div>
                     </div><!-- end container -->
                 </div>
             </div><!-- end section -->
         </div>
+        
         <div class="carousel-item">
             <div id="home" class="first-section" style="background-image:url('images/slider-02.jpg');">
                 <div class="dtab">
@@ -180,59 +182,58 @@
         </a>
     </div>
     </div>
+    <div id="overviews" class="section lb custom-about-us">
+        <div class="container-fluid">
+            <div class="section-title row text-left">
+                <div class="col-md-8 offset-md-0">
+                    <h3>Over ons</h3>
+                    <!-- <p class="lead">Rimondia B.V.is onderdeel van de Van de Ridder Groep en houd zich bezig met monstername en diagnose, voornamelijk in de agrarische sector.</p> -->
+                </div>
+            </div><!-- end title -->
+
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <!-- <h4>2018 BEST WEB HOSTING COMPANY</h4> -->
+                        <!-- <h2>Awards Winner Support Center</h2> -->
+                        <p>Al sinds 1992 is monstername een belangrijke specialisatie binnen de Van de Ridder organisatie. Zo belangrijk dat in 2006 is besloten deze specialisatie onder te brengen in een apart onafhankelijk bedrijf onder de naam Rimondia.</p> 
+                            <p>In het verleden beperkte de dienstverlening zich tot het nemen van monsters voor de diverse opdrachtgevers, sinds 2006 bieden wij ook mogelijkheden om onderzoeken bij ons onder te brengen. Op deze manier kan Rimondia u een totaal pakket aanbieden, van planning en organisatie tot de uiteindelijke uitslag van het monster. Hierdoor kunnen wij het complete traject efficiënt uitvoeren en onze opdrachtgevers in een korte tijd van een uitslag en advies voorzien.</p>
 
 
-    <div id="domain" class="section wb">
+                        <!--   <a href="#" class="hover-btn-new"><span>Learn More</span></a> -->
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/c8KcRWJMLNg?start=4" allowfullscreen></iframe>
+                      </div>
+                </div><!-- end col -->
+            </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div id="over-ons" class="section wb">
         <div class="container">
             <div class="row text-center">
 
                 <div class="col-lg-12">
-                    <form class="checkdomain form-inline">
-                        <div class="checkdomain-wrapper">
-                            <div class="form-group">
-                                <label class="sr-only" for="domainnamehere">Domain name</label>
-                                <input type="text" class="form-control" id="domainnamehere"
-                                    placeholder="Enter domain name here..">
-                                <button type="submit" class="btn btn-primary grd1"><i class="fa fa-search"></i></button>
-                            </div>
-                            <hr>
-                            <div class="clearfix"></div>
-                            <div class="checkbox checkbox-warning">
-                                <input id="domaincom" type="checkbox" class="styled" checked>
-                                <label for="domaincom">.com</label>
-                            </div>
-                            <div class="checkbox checkbox-warning">
-                                <input id="domainnet" type="checkbox" class="styled" checked>
-                                <label for="domainnet">.net</label>
-                            </div>
-                            <div class="checkbox checkbox-warning">
-                                <input id="domainorg" type="checkbox" class="styled">
-                                <label for="domainorg">.org</label>
-                            </div>
-                            <div class="checkbox checkbox-warning">
-                                <input id="domaintv" type="checkbox" class="styled">
-                                <label for="domaintv">.tv</label>
-                            </div>
-                            <div class="checkbox checkbox-warning">
-                                <input id="domaininfo" type="checkbox" class="styled">
-                                <label for="domaininfo">.info</label>
-                            </div>
-                        </div><!-- end checkdomain-wrapper -->
-                    </form>
+                    
                 </div>
                 <div class="col-lg-12">
-                    <div class="customwidget text-center">
-                        <h1>Find Your Domain</h1>
+                    <div class="customwidget text-left">
+                        <h1>Over ons </h1>
                         <p>With our awesome domain name search form, you can search any domain names with tons of
                             extensions.</p>
                         <p>Pursuing high quality standards, my greatest efforts are focused on producing semantic,
                             SEO-friendly, valid and clean code. In order to stay effective and relevant in this
                             constantly evolving sphere I always try to be in touch with the latest news and recent
                             approaches in programming.</p>
-                        <ul class="list-inline">
+                        <!-- <ul class="list-inline">
                             <li><i class="fa fa-check"></i> 20k Domains Sold in 2017</li>
                             <li><i class="fa fa-check"></i> 4k Website Created</li>
-                        </ul>
+                        </ul> -->
                         <!-- end list -->
                         <a href="#" class="hover-btn-new"><span>Hosting Packages</span></a>
                     </div>

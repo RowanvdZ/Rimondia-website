@@ -8,7 +8,21 @@
 		padding: 30px;
 		position: relative;
 		margin: 0px 400px 0px 400px;
-    }
+	}
+	
+	.box-slider .carousel-control-prev {
+top: 45%;
+width: 45px;
+height: 45px;
+
+	}
+
+	.box-slider .carousel-control-next {
+		top: 45%;
+		width: 45px;
+		height: 45px;
+		
+			}
 
     .container-fluid {
         padding-right: 300px;
@@ -16,7 +30,10 @@
         margin-right: auto;
         margin-left: auto;
 	  }
-	  
+	  .navbar-custom {
+		padding-right: 280px;
+		padding-left: 280px;
+	  }
 	  .container {
 		  width: auto;
 	  }
@@ -49,7 +66,7 @@
 
 		.carousel-inner {
 			height: 80%;
-		}
+		
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	.top-navbar .navbar-light .navbar-nav .nav-item{

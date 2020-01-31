@@ -29,6 +29,7 @@ body {
     font-size: 15px;
     font-family: 'Quicksand', sans-serif;
     line-height: 1.80857;
+    scroll-behavior: smooth;
 }
 
 
@@ -3287,6 +3288,8 @@ span.m_1 {
         background-color: rgba(255,255,255,.5);
         border-radius: 25px;
     }
+
+
     
 
 

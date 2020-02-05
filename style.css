@@ -29,6 +29,7 @@ body {
     font-size: 15px;
     font-family: 'Quicksand', sans-serif;
     line-height: 1.80857;
+    scroll-behavior: smooth;
 }
 
 
@@ -634,7 +635,8 @@ a img.aligncenter {
 	left: 40%;
 }
 .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link{
-	color: var(--main-color);
+    color: var(--main-color);
+    opacity: 1;
 }
 .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link::after{
 	opacity: 1;
@@ -642,15 +644,17 @@ a img.aligncenter {
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item:hover::after{
-	opacity: 1;
+    opacity: 1;
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover::before{
 	opacity: 1;
-	left: 40%;
+    left: 40%;
+
 }
 .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover{
-	color: var(--main-color);
+    color: var(--main-color);
+
 }
 .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover::after{
 	opacity: 1;
@@ -940,6 +944,10 @@ a img.aligncenter {
     background-color: #f2f3f5;
 }
 
+.section.lb.custom-about-us{
+    background-color: white;
+    }
+
 .section.db {
     background-color: #1f1f1f;
 }
@@ -1003,7 +1011,7 @@ a img.aligncenter {
 .section-title {
     display: block;
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
 }
 
 .section-title p {
@@ -1018,7 +1026,7 @@ a img.aligncenter {
     font-size: 42px;
     font-weight: 500;
     line-height: 62px;
-    margin: 0 0 25px;
+    margin: 0 0 10px;
     padding: 0;
     text-transform: none;
 }
@@ -1663,7 +1671,7 @@ a img.aligncenter {
 -------------------------------------------------------------------*/
 
 .align-items-center{
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 }
 
 .message-box{
@@ -3264,25 +3272,29 @@ span.m_1 {
 /*------------------------------------------------------------------
     Custom CSS
 -------------------------------------------------------------------*/
-@media (min-width: 1200px) { 
+.rimondia-style-box{
+    background-color: rgba(109, 24, 116, 0.8);
+    position: relative; }
+
+    .carousel-indicators li {
+        position: relative;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        width: 30px;
+        height: 5px;
+        margin-right: 3px;
+        margin-left: 3px;
+        text-indent: -999px;
+        background-color: rgba(255,255,255,.5);
+        border-radius: 25px;
+    }
+
+
     
-   
 
-.timeline-divider{
-    background-color: red;
+.img-rounded{
+    padding-bottom: 20px;
 }
-
-
-
-@media (min-width: 992px) {
-    
-}
-
-
-
-
-
-
 
 
 

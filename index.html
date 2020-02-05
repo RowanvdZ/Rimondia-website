@@ -32,10 +32,10 @@
 <!-- Modernizer for Portfolio -->
 <script src="js/modernizer.js"></script>
 
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<!-- [if lt IE 9]> -->
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<!-- <![endif] -->
 
 </head>
 
@@ -55,12 +55,12 @@
 
     <!-- Start header -->
     <header class="top-navbar">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav id="navbar-display" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid navbar-custom">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo_rimondia.png" alt="" />
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host"
+                <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host"
                     aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -68,9 +68,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbars-host">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link nav-link-ltr" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="about.html">Over ons</a></li>
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="features.html">Monstername </a></li>
+                        <li class="nav-item" id="home"><a class="nav-link nav-link-ltr" href="index.html">Home</a></li>
+                        <li class="nav-item" id="over-ons"><a class="nav-link nav-link-ltr" href="">Over ons</a></li>
+                        <li class="nav-item" id="monstername"><a class="nav-link nav-link-ltr" href="features.html">Monstername </a></li>
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Hosting
                             </a>
@@ -82,9 +82,9 @@
                                 <a class="dropdown-item" href="hosting.html">Dedicated Hosting </a>
                             </div>
                         </li> -->
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="domain.html">Diensten</a></li>
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="pricing.html">Vacatures</a></li>
-                        <li class="nav-item"><a class="nav-link nav-link-ltr" href="contact.html">Contact</a></li>
+                        <li class="nav-item" id="werkwijze"><a class="nav-link nav-link-ltr" href="">Werkwijze</a></li>
+                        <li class="nav-item" id="vacatures"><a class="nav-link nav-link-ltr" href="">Vacatures</a></li>
+                        <li class="nav-item" id="contact"><a class="nav-link nav-link-ltr" href="">Contact</a></li>
                     </ul>
 
                 </div>
@@ -96,7 +96,8 @@
     <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel"
         data-pause="hover" data-interval="false">
         <!-- Indicators -->
-        <ol class="carousel-indicators">
+
+        <ol id="over-ons-section" class="carousel-indicators">
             <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleControls" data-slide-to="1"></li>
             <li data-target="#carouselExampleControls" data-slide-to="2"></li>
@@ -104,125 +105,263 @@
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
                 <div id="home" class="first-section" style="background-image:url('images/busjes_rimondia.png');">
+                    <div class="dtab" style="z-index: 1213;">
+                        <div class="container rimondia-style-box ">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 ">
+                                    <div class="big-tagline">
+                                        <h2>Rimondia B.V.</h2>
+                                        <p class="lead">Rimondia BV is onderdeel van de Van de Ridder Groep en houd zich
+                                            bezig met monstername en diagnose, voornamelijk in de agrarische sector.
+                                        </p>
+                                        <a href="" class="hover-btn-new" id="contact"><span>Contact </span></a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="" class="hover-btn-new" id="over-ons"><span>Over ons</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end container -->
+                    </div>
+                </div><!-- end section -->
+            </div>
+
+            <div class="carousel-item">
+                <div id="home" class="first-section" style="background-image:url('images/slider-02.jpg');">
                     <div class="dtab">
-                        <div class="container rimondia-style-box" <div class="row">
-                            <div class="col-md-12 col-sm-12 ">
-                                <div class="big-tagline">
-                                    <h2>Rimondia B.V.</h2>
-                                    <p class="lead">Rimondia BV is onderdeel van de Van de Ridder Groep en houd zich
-                                        bezig met monstername en diagnose, voornamelijk in de agrarische sector.
-                                    </p>
-                                    <a href="#" class="hover-btn-new"><span>Contact </span></a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#" class="hover-btn-new"><span>Over ons</span></a>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 text-left">
+                                    <div class="big-tagline">
+                                        <h2 data-animation="animated zoomInRight">Find the right
+                                            <strong>Hosting</strong></h2>
+                                        <p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive
+                                            landing page template, you can promote your all hosting, domain and email
+                                            services. </p>
+                                        <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="#" class="hover-btn-new"><span>Read More</span></a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end container -->
-                </div>
-            </div><!-- end section -->
-        </div>
-        <div class="carousel-item">
-            <div id="home" class="first-section" style="background-image:url('images/slider-02.jpg');">
-                <div class="dtab">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 text-left">
-                                <div class="big-tagline">
-                                    <h2 data-animation="animated zoomInRight">Find the right
-                                        <strong>Hosting</strong></h2>
-                                    <p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive
-                                        landing page template, you can promote your all hosting, domain and email
-                                        services. </p>
-                                    <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#" class="hover-btn-new"><span>Read More</span></a>
+                            </div><!-- end row -->
+                        </div><!-- end container -->
+                    </div>
+                </div><!-- end section -->
+            </div>
+            <div class="carousel-item">
+                <div id="home" class="first-section" style="background-image:url('images/slider-03.jpg');">
+                    <div class="dtab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 text-center">
+                                    <div class="big-tagline">
+                                        <h2 data-animation="animated zoomInRight"><strong>VPS Servers</strong> Company
+                                        </h2>
+                                        <p class="lead" data-animation="animated fadeInLeft">1 IP included with each
+                                            server
+                                            Your Choice of any OS (CentOS, Windows, Debian, Fedora)
+                                            FREE Reboots</p>
+                                        <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="#" class="hover-btn-new"><span>Read More</span></a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end container -->
-                </div>
-            </div><!-- end section -->
-        </div>
-        <div class="carousel-item">
-            <div id="home" class="first-section" style="background-image:url('images/slider-03.jpg');">
-                <div class="dtab">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 text-center">
-                                <div class="big-tagline">
-                                    <h2 data-animation="animated zoomInRight"><strong>VPS Servers</strong> Company
-                                    </h2>
-                                    <p class="lead" data-animation="animated fadeInLeft">1 IP included with each
-                                        server
-                                        Your Choice of any OS (CentOS, Windows, Debian, Fedora)
-                                        FREE Reboots</p>
-                                    <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#" class="hover-btn-new"><span>Read More</span></a>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end container -->
-                </div>
-            </div><!-- end section -->
-        </div>
-        <!-- Left Control -->
-        <a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            </div><!-- end row -->
+                        </div><!-- end container -->
+                    </div>
+                </div><!-- end section -->
+            </div>
+            <!-- Left Control -->
+            <!-- <a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="fa fa-angle-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
-        </a>
+        </a> -->
 
-        <!-- Right Control -->
-        <a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <!-- Right Control -->
+            <!-- <a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <span class="fa fa-angle-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-        </a>
+        </a> -->
+        </div>
     </div>
-    </div>
+    <div id="overviews" class="section lb custom-about-us">
+        <div class="container-fluid">
+            <div class="section-title row text-left">
+                <div class="col-md-8 offset-md-0">
+                    <h3>Over ons</h3>
+                    <!-- <p class="lead">Rimondia B.V.is onderdeel van de Van de Ridder Groep en houd zich bezig met monstername en diagnose, voornamelijk in de agrarische sector.</p> -->
+                </div>
+            </div><!-- end title -->
+
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <!-- <h4>2018 BEST WEB HOSTING COMPANY</h4> -->
+                        <!-- <h2>Awards Winner Support Center</h2> -->
+                        <p>Al sinds 1992 is monstername een belangrijke specialisatie binnen de Van de Ridder
+                            organisatie. Zo belangrijk dat in 2006 is besloten deze specialisatie onder te brengen in
+                            een apart onafhankelijk bedrijf onder de naam Rimondia.</p>
+                        <p>In het verleden beperkte de dienstverlening zich tot het nemen van monsters voor de diverse
+                            opdrachtgevers, sinds 2006 bieden wij ook mogelijkheden om onderzoeken bij ons onder te
+                            brengen. Op deze manier kan Rimondia u een totaal pakket aanbieden, van planning en
+                            organisatie tot de uiteindelijke uitslag van het monster. Hierdoor kunnen wij het complete
+                            traject efficiënt uitvoeren en onze opdrachtgevers in een korte tijd van een uitslag en
+                            advies voorzien.</p>
+                        <!--   <a href="#" class="hover-btn-new"><span>Learn More</span></a> -->
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="embed-responsive embed-responsive-16by9 wow fadeIn">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/c8KcRWJMLNg?start=4"
+                            allowfullscreen></iframe>
+                    </div>
+                </div><!-- end col -->
+            </div>
+        </div><!-- end row -->
+    </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div id="monstername-section" class="section lb">
+        <div class="container-fluid">
+            <div class="section-title row text-left">
+                <div class="col-md-8 offset-md-0">
+                    <h3>Monstername</h3>
+                    <p class="lead">Naast het afnemen van bloed uisque eget nisl id nulla sagittis auctor quis id.
+                        Aliquam quis vehicula enim, non aliquam </p>
+                </div>
+            </div><!-- end title -->
+
+            <div class="row align-items" id="switch-elements">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/about_02.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <!-- <h4>2018 BEST WEB HOSTING COMPANY</h4> -->
+                        <h2>Bloedafname</h2>
+                        <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam
+                            risus. Sed a tellus quis mi rhoncus dignissim.</p>
+
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
+                            bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis
+                            montes, nascetur ridiculus mus. Sed vitae rutrum neque. </p>
+
+                        <!-- <a href="#" class="hover-btn-new"><span>Learn More</span></a> -->
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+            </div>
+            <div style="padding-top: 30px;"></div>
+            <div class="row align-items">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>Overige monsters</h2>
+                        <h4 style="color: black">Ruwvoermonster</h4>
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
+                            bibendum.</p>
+                        <h4 style="color: black">Watermonsters</h4>
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
+                            bibendum.</p>
+                        <h4 style="color: black">Melkmonsters</h4>
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
+                            bibendum.</p>
 
 
-    <div id="domain" class="section wb">
+                        <!-- <a href="#" class="hover-btn-new"><span>Learn More</span></a> -->
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/about_03.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+
+    <section id="werkwijze-section" class="page-section">
+        <div class="container-fluid">
+            <div class="section-title row text-left">
+                <div class="col-lg-12 offset-lg-0">
+                    <h3>Werkwijze</h3>
+                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                        lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+                </div>
+            </div><!-- end title -->
+            <div class="timeline">
+                <div class="timeline__wrap">
+                    <div class="timeline__items">
+                        <div class="timeline__item">
+                            <div class="timeline__content img-bg-01 wow fadeInDown">
+                                <h2>1. Order verwerken</h2>
+                                <p>De order komt binnen en wordt verwerkt in het systeem.</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content img-bg-02 wow fadeInUp">
+                                <h2>2. Afspraak maken</h2>
+                                <p>Er wordt contact opgenomen met de klant om een afspraak in te plannen.</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content img-bg-03 wow fadeInDown">
+                                <h2>3. Voorbereiden bezoek</h2>
+                                <p>I&R data wordt in de handhelds geladen en de voorraad in de busjes wordt gecheckt.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content img-bg-04 wow fadeInUp">
+                                <h2>4. Monstername</h2>
+                                <p>Van elk kalf wordt het oormerknummer geregistreerd en vervolgens bloed afgenomen.</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content img-bg-01">
+                                <h2>5. Reiniging</h2>
+                                <p>Na de werkzaamheden worden alle gebruikte materialen grondig gereinigd en ontsmet.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content img-bg-02">
+                                <h2>6. Gekoeld transport</h2>
+                                <p>De bloedmonsters gaan gekoeld terug naar Rimondia.</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content img-bg-03">
+                                <h2>7. Analyseren monsters</h2>
+                                <p>In het laboratorium worden de boedmonsters geanalyseerd op HB en serumijzer.</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content img-bg-04">
+                                <h2>8.Resultaten verwerken</h2>
+                                <p>De resultaten worden samengevoegd en teruggekoppeld naar de klant.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 
+    <div id="over-ons" class="section wb">
         <div class="container">
             <div class="row text-center">
 
                 <div class="col-lg-12">
-                    <form class="checkdomain form-inline">
-                        <div class="checkdomain-wrapper">
-                            <div class="form-group">
-                                <label class="sr-only" for="domainnamehere">Domain name</label>
-                                <input type="text" class="form-control" id="domainnamehere"
-                                    placeholder="Enter domain name here..">
-                                <button type="submit" class="btn btn-primary grd1"><i class="fa fa-search"></i></button>
-                            </div>
-                            <hr>
-                            <div class="clearfix"></div>
-                            <div class="checkbox checkbox-warning">
-                                <input id="domaincom" type="checkbox" class="styled" checked>
-                                <label for="domaincom">.com</label>
-                            </div>
-                            <div class="checkbox checkbox-warning">
-                                <input id="domainnet" type="checkbox" class="styled" checked>
-                                <label for="domainnet">.net</label>
-                            </div>
-                            <div class="checkbox checkbox-warning">
-                                <input id="domainorg" type="checkbox" class="styled">
-                                <label for="domainorg">.org</label>
-                            </div>
-                            <div class="checkbox checkbox-warning">
-                                <input id="domaintv" type="checkbox" class="styled">
-                                <label for="domaintv">.tv</label>
-                            </div>
-                            <div class="checkbox checkbox-warning">
-                                <input id="domaininfo" type="checkbox" class="styled">
-                                <label for="domaininfo">.info</label>
-                            </div>
-                        </div><!-- end checkdomain-wrapper -->
-                    </form>
+                    
                 </div>
                 <div class="col-lg-12">
-                    <div class="customwidget text-center">
-                        <h1>Find Your Domain</h1>
+                    <div class="customwidget text-left">
+                        <h1>Over ons </h1>
                         <p>With our awesome domain name search form, you can search any domain names with tons of
                             extensions.</p>
                         <p>Pursuing high quality standards, my greatest efforts are focused on producing semantic,
@@ -232,181 +371,45 @@
                         <ul class="list-inline">
                             <li><i class="fa fa-check"></i> 20k Domains Sold in 2017</li>
                             <li><i class="fa fa-check"></i> 4k Website Created</li>
-                        </ul>
-                        <!-- end list -->
+                        </ul> -->
+    <!-- end list 
                         <a href="#" class="hover-btn-new"><span>Hosting Packages</span></a>
                     </div>
                 </div>
 
-                <!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-
-    <div id="overviews" class="section lb">
-        <div class="container-fluid">
-            <div class="section-title row text-center">
-                <div class="col-md-8 offset-md-2">
-                    <h3>About</h3>
-                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-                        lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
-                </div>
-            </div><!-- end title -->
-
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-                        <h4>2018 BEST WEB HOSTING COMPANY</h4>
-                        <h2>Awards Winner Support Center</h2>
-                        <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam
-                            risus. Sed a tellus quis mi rhoncus dignissim.</p>
-
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
-                            bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis
-                            montes, nascetur ridiculus mus. Sed vitae rutrum neque. </p>
-
-                        <a href="#" class="hover-btn-new"><span>Learn More</span></a>
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
-
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="post-media wow fadeIn">
-                        <img src="images/about_02.jpg" alt="" class="img-fluid img-rounded">
-                    </div><!-- end media -->
-                </div><!-- end col -->
             </div>
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="post-media wow fadeIn">
-                        <img src="images/about_03.jpg" alt="" class="img-fluid img-rounded">
-                    </div><!-- end media -->
-                </div><!-- end col -->
-
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-                        <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
-                            bibendum.</p>
-
-                        <a href="#" class="hover-btn-new"><span>Learn More</span></a>
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
-
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-
-    <section class="page-section">
-        <div class="container-fluid">
-            <div class="section-title row text-center">
-                <div class="col-lg-12 offset-lg-0">
-                    <h3>Our history</h3>
-                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-                        lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
-                </div>
-            </div><!-- end title -->
-            <div class="timeline">
-                <div class="timeline__wrap">
-                    <div class="timeline__items">
-                        <div class="timeline__item">
-                            <div class="timeline__content img-bg-01">
-                                <h2>2018</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
-                                    condimentum lacus dapibus. Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
-                                    condimentum lacus dapibus.</p>
-                            </div>
-                        </div>
-                        <div class="timeline__item">
-                            <div class="timeline__content img-bg-02">
-                                <h2>2015</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
-                                    condimentum lacus dapibus.</p>
-                            </div>
-                        </div>
-                        <div class="timeline__item">
-                            <div class="timeline__content img-bg-03">
-                                <h2>2014</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
-                                    condimentum lacus dapibus.</p>
-                            </div>
-                        </div>
-                        <div class="timeline__item">
-                            <div class="timeline__content img-bg-04">
-                                <h2>2012</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
-                                    condimentum lacus dapibus.</p>
-                            </div>
-                        </div>
-                        <div class="timeline__item">
-                            <div class="timeline__content img-bg-01">
-                                <h2>2010</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
-                                    condimentum lacus dapibus. Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                        </div>
-                        <div class="timeline__item">
-                            <div class="timeline__content img-bg-02">
-                                <h2>2007</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
-                                    condimentum lacus dapibus.</p>
-                            </div>
-                        </div>
-                        <div class="timeline__item">
-                            <div class="timeline__content img-bg-03">
-                                <h2>2004</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
-                                    condimentum lacus dapibus.</p>
-                            </div>
-                        </div>
-                        <div class="timeline__item">
-                            <div class="timeline__content img-bg-04">
-                                <h2>2002</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
-                                    condimentum lacus dapibus.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
-                                    condimentum lacus dapibus.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+        </div> 
+    </div>end section -->
     <div class="section cl">
-        <div class="container-fluid">
-            <div class="row text-left stat-wrap">
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
-                            class="flaticon-hosting"></i></span>
-                    <p class="stat_count">12000</p>
-                    <h3>Hosted Sites</h3>
-                </div><!-- end col -->
+        <div id="testimonials" class="parallax section db parallax-off"
+            style="background-image:url('images/busjes_rimondia.png');">
+            <div class="container-fluid">
 
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
-                            class="flaticon-domain-registration"></i></span>
-                    <p class="stat_count">24000</p>
-                    <h3>Sold Domains</h3>
-                </div><!-- end col -->
+                <div class="row text-left stat-wrap">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
+                                class="flaticon-hosting"></i></span>
+                        <p class="stat_count">1200000</p>
+                        <h3>Monsters gemeten</h3>
+                    </div><!-- end col -->
 
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
-                            class="flaticon-mail"></i></span>
-                    <p class="stat_count">5000</p>
-                    <h3>Email Accounts</h3>
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
+                                class="flaticon-domain-registration"></i></span>
+                        <p class="stat_count">240000</p>
+                        <h3>Kalveren totaal</h3>
+                    </div><!-- end col -->
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
+                                class="flaticon-mail"></i></span>
+                        <p class="stat_count">5000</p>
+                        <h3>Diertjens</h3>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end section -->
+    </div>
 
     <div id="pricing" class="section lb">
         <div class="container-fluid">
@@ -414,7 +417,7 @@
                 <h3>Ready to get started?</h3>
                 <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. </p>
-            </div><!-- end title -->
+            </div>
 
             <div class="row">
                 <div class="col-md-6 offset-md-3">
@@ -424,7 +427,7 @@
                             <li><a href="#tab2" data-toggle="pill">Yearly Subscription</a></li>
                         </ul>
                     </div>
-                </div><!-- end col -->
+                </div>
             </div>
 
             <hr class="invis">
@@ -495,8 +498,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- end row -->
-                        </div><!-- end pane -->
+                            </div>
+                        </div>
 
                         <div class="tab-pane fade" id="tab2">
                             <div class="row text-center">
@@ -561,22 +564,21 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- end row -->
-                        </div><!-- end pane -->
-                    </div><!-- end content -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div id="testimonials" class="parallax section db parallax-off"
+    <!-- <div id="testimonials" class="parallax section db parallax-off"
         style="background-image:url('images/parallax_04.jpg');">
         <div class="container">
             <div class="section-title text-center">
                 <h3>Testimonials</h3>
                 <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. </p>
-            </div><!-- end title -->
 
             <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -591,9 +593,7 @@
                                 <img src="images/testi_01.png" alt="" class="img-fluid">
                                 <h4>James Fernando </h4>
                             </div>
-                            <!-- end testi-meta -->
                         </div>
-                        <!-- end testimonial -->
 
                         <div class="testimonial clearfix">
                             <div class="desc">
@@ -605,10 +605,7 @@
                                 <img src="images/testi_02.png" alt="" class="img-fluid">
                                 <h4>Jacques Philips </h4>
                             </div>
-                            <!-- end testi-meta -->
                         </div>
-                        <!-- end testimonial -->
-
                         <div class="testimonial clearfix">
                             <div class="desc">
                                 <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
@@ -619,9 +616,7 @@
                                 <img src="images/testi_03.png" alt="" class="img-fluid ">
                                 <h4>Venanda Mercy </h4>
                             </div>
-                            <!-- end testi-meta -->
                         </div>
-                        <!-- end testimonial -->
                         <div class="testimonial clearfix">
                             <div class="desc">
                                 <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
@@ -632,9 +627,7 @@
                                 <img src="images/testi_01.png" alt="" class="img-fluid">
                                 <h4>James Fernando </h4>
                             </div>
-                            <!-- end testi-meta -->
                         </div>
-                        <!-- end testimonial -->
 
                         <div class="testimonial clearfix">
                             <div class="desc">
@@ -646,9 +639,7 @@
                                 <img src="images/testi_02.png" alt="" class="img-fluid">
                                 <h4>Jacques Philips </h4>
                             </div>
-                            <!-- end testi-meta -->
                         </div>
-                        <!-- end testimonial -->
 
                         <div class="testimonial clearfix">
                             <div class="desc">
@@ -660,13 +651,12 @@
                                 <img src="images/testi_03.png" alt="" class="img-fluid">
                                 <h4>Venanda Mercy </h4>
                             </div>
-                            <!-- end testi-meta -->
-                        </div><!-- end testimonial -->
-                    </div><!-- end carousel -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
     <div class="parallax section dbcolor">
         <div class="container">
@@ -748,8 +738,8 @@
         <div class="container">
             <div class="footer-distributed">
                 <div class="footer-left">
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">QuickCloud</a> Design By
-                        : <a href="https://html.design/">html design</a></p>
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2020 <a href="#"></a> Design By
+                        : <a href="https://html.design/">Rowan</a></p>
                 </div>
 
                 <div class="footer-right">

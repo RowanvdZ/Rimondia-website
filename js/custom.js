@@ -151,6 +151,12 @@
     var customParalaxSection = $("#testimonials").offset().top;
     $(window).on('scroll', function() {
         var scrollTop = $(window).scrollTop();
+        var docHeight = $(document).height(),
+            scrollPercent;
+
+        scrollPercent = ($(window).scrollTop() / docHeight) * 100;
+
+        $('.scroll-progress').width(scrollPercent + '%');
 
         if (screen.width > 991) {
             if (scrollTop > 0) {

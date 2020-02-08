@@ -563,68 +563,29 @@ a img.aligncenter {
     margin: 0px 0px 0px 6px
 }
 
-.top-navbar .navbar-light .navbar-nav .nav-item::after {
-    position: absolute;
-    content: '';
-    left: 50%;
-    bottom: auto;
-    top: 11px;
-    width: 7px;
-    height: 8px;
-    opacity: 0;
-    margin-left: -3px;
-    background-color: #ffffff;
-	border-radius: 50px;
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-    transition: all 900ms ease;
-    -webkit-transition: all 900ms ease;
-    -ms-transition: all 900ms ease;
-    -o-transition: all 900ms ease;
-    -moz-transition: all 900ms ease;
-}
 
 .top-navbar .navbar-light .navbar-nav .nav-item .nav-link::before {
     position: absolute;
     content: '';
     left: 0%;
     bottom: auto;
-    top: -4px;
-    width: 7px;
-    height: 8px;
+    top: 37px;
+    width: 50px;
+    height: 2px;
 	border-radius: 50px;
     opacity: 0;
-    margin-left: -10px;
-    background-color: #ffffff;
+    margin-left: -20px;
+    background-color: var(--main-color);
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
-    transition: all 900ms ease;
-    -webkit-transition: all 900ms ease;
-    -ms-transition: all 900ms ease;
-    -o-transition: all 900ms ease;
-    -moz-transition: all 900ms ease;
+    transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
 }
 
-.top-navbar .navbar-light .navbar-nav .nav-item .nav-link::after {
-    position: absolute;
-    content: '';
-    right: 0%;
-    left: auto;
-    bottom: auto;
-    top: -4px;
-    width: 7px;
-    height: 8px;
-	border-radius: 50px;
-	border: none !important;
-    opacity: 0;
-    margin-right: -11px;
-    background-color: #ffffff;
-    transition: all 900ms ease;
-    -webkit-transition: all 900ms ease;
-    -ms-transition: all 900ms ease;
-    -o-transition: all 900ms ease;
-    -moz-transition: all 900ms ease;
-}
+
 
 .top-navbar .navbar-light .navbar-nav .nav-item.active::after{
 	opacity: 1;
@@ -3289,12 +3250,11 @@ span.m_1 {
         border-radius: 25px;
     }
 
-
-    
-
 .img-rounded{
     padding-bottom: 20px;
 }
+
+
 
 
 

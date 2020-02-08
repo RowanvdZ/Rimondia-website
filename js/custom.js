@@ -47,6 +47,7 @@
 		Scroll to top  
 	============================================== */
 
+
     if ($('#scroll-to-top').length) {
         var scrollTrigger = 100, // px
             backToTop = function () {
@@ -61,83 +62,139 @@
         $(window).on('scroll', function () {
             backToTop();
         });
-        $("#home").on("click", function (e) {
-            e.preventDefault();
-            if (!$(window).scrollTop() == 0) {
-                $('html,body').animate({
-                    scrollTop: 5
-                }, 700);
-            }
-        });
+
         $('#scroll-to-top').on('click', function (e) {
             e.preventDefault();
             $('html,body').animate({
                 scrollTop: 0
             }, 700);
         });
+
+        $("#home").on("click", function (e) {
+            e.preventDefault();
+
+            if (!$(window).scrollTop() == 0) {
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            }
+        });
     }
 
+
     /* ==============================================
-		Scroll to section from navigation
+		Scroll and navigation functions
     ============================================== */
     var extraOffset;
     $(".nav-item").click(function (e) {
         e.preventDefault();
-        $('.nav-item').removeClass("active");   
-         $(this).addClass("active");
-        
-        if (100 > $(window).scrollTop()) {
-            extraOffset = 100;
 
+        $('.nav-item').removeClass("active");
+        $(this).addClass("active");
+
+        if ($(window).scrollTop() < 100) {
+            extraOffset = 100;
         } else {
+            if (screen.width < 991) {
+
+                extraOffset = 10;
+            }
             extraOffset = 20;
         }
 
+        var navbar = $("#navbars-host");
+        if (screen.width < 991) {
+            navbar.removeClass("collapse");
+            navbar.removeClass("show");
+            navbar.addClass("collapsing");
+            navbar.addClass("collapse");
+        }
+        if ($(this).attr("id") != "home") {
+            var section = "#" + $(this).attr('id') + "-section";
+            $([document.documentElement, document.body]).animate({
 
-        var section = "#" + $(this).attr('id') + "-section";
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $(section).offset().top - extraOffset
-        }, 700);
+                scrollTop: $(section).offset().top - extraOffset
+            }, 700);
+        }
     });
 
     $(".hover-btn-new").click(function (e) {
-        e.preventDefault();        
-        if (100 > $(window).scrollTop()) {
+        e.preventDefault();
+        if (100 < $(window).scrollTop()) {
             extraOffset = 100;
 
         } else {
-            extraOffset = 20;
+            extraOffset = 60;
+
         }
         var section = "#" + $(this).attr('id') + "-section";
+
         $([document.documentElement, document.body]).animate({
-            scrollTop: $(section).offset().top - extraOffset
+            scrollTop: $(section).offset().top() - extraOffset
         }, 700);
     });
-    
 
-  
+    $(".navbar-brand").on("click", function (e) {
+        e.preventDefault();
+
+        if (!$(window).scrollTop() == 0) {
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+        }
+    });
+    
+    var navItem = $(".nav-item");
+    var overOnsSection = $("#over-ons-section").offset().top - 200;
+    var monsternameSection = $("#monstername-section").offset().top - 200;
+    var werkwijzeSection = $("#werkwijze-section").offset().top - 200;
+    var customParalaxSection = $("#testimonials").offset().top;
+    $(window).on('scroll', function () {
+        var scrollTop = $(window).scrollTop();
+
+        if (screen.width > 991) {
+            if (scrollTop > 0) {
+                navItem.removeClass("active");
+                $("#home").addClass("active");
+            }
+            if (scrollTop > overOnsSection) {
+                navItem.removeClass("active");
+                $("#over-ons").addClass("active");
+            }
+            if (scrollTop > monsternameSection) {
+                navItem.removeClass("active");
+                $("#monstername").addClass("active");
+            }
+            if (scrollTop > werkwijzeSection) {
+                navItem.removeClass("active");
+                $("#werkwijze").addClass("active");
+            }
+        }
+    })
+
 
     /* ==============================================
      Fun Facts -->
      =============================================== */
-
-    function count($this) {
-        var current = parseInt($this.html(), 10);
-        current = current + 10000; /* Where 50 is increment */
-        $this.html(++current);
-        if (current > $this.data('count')) {
-            $this.html($this.data('count'));
-        } else {
-            setTimeout(function () {
-                count($this)
-            }, 30);
+        function count($this) {
+            var current = parseInt($this.html(), 10);
+            current = current + 5000; /* Where 50 is increment */
+            $this.html(++current);
+            if (current > $this.data('count')) {
+                $this.html($this.data('count'));
+            } else {
+                setTimeout(function () {
+                    count($this)
+                }, 30);
+            }
         }
-    }
-    $(".stat_count, .stat_count_download").each(function () {
-        $(this).data('count', parseInt($(this).html(), 10));
-        $(this).html('0');
-        count($(this));
-    });
+            $(".stat_count, .stat_count_download").each(function () {
+                $(this).data('count', parseInt($(this).html(), 10));
+                $(this).html('0');
+                count($(this));
+            });
+
+
 
 	/* ==============================================
      Bootstrap Touch Slider -->

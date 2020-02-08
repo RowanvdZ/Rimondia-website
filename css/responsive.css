@@ -3,6 +3,9 @@
 /****************************************** */
 
 @media (min-width: 1199px){
+	.custom-paralax {
+		padding: 0px;
+	}
 	.rimondia-style-box{
         background-color: rgba(109, 24, 116, 0.8); 
 		padding: 30px;
@@ -80,7 +83,9 @@ height: 45px;
       }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-	
+	.custom-paralax {
+		padding: 0px;
+	}
 
 	.top-navbar .navbar-light .navbar-nav .nav-item{
 		padding: 0px;
@@ -364,7 +369,11 @@ height: 45px;
 		margin-bottom: 30px;
 	}
 	.section{
-		padding: 40px 0;
+		padding: 70px 0;
+	}
+
+	.custom-paralax {
+		padding: 0px;
 	}
 	.dmoain-pricing table th{
 		font-size: 14px;
@@ -381,6 +390,9 @@ height: 45px;
 	}
 	.customer-box .tab-content{
 		padding: 20px 0px;
+	}
+	#monstername-section {
+		padding-top: 70px;
 	}
 }
 

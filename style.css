@@ -3329,24 +3329,27 @@ h1 {
     margin-top: 15px;
 }
 
-.scroll-progress-container {
-    width: 120%;
+.progress {
+    background: linear-gradient(to right, var(--main-color) var(--scroll), transparent 0);
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+    bottom: -1px;
+    margin-bottom: 0;
     height: 2px;
-    background-color: white;
-    left: -3%;
-    top: 100%;
-    position: absolute;
-}
+    z-index: 200;
+  }
 
-.scroll-progress {
-    width: 0px;
-    height: 2px;
-    background-color: var(--main-color);
-}
+  #navbar-display{
+      padding: 0px;
+  }
 
-.filler-text {
-    width: 60%;
-    margin-top: 80px;
-    margin-left: 50px;
-    position: absolute;
-}
+  .logo {
+      height: 50px;
+      padding: 5px 10px
+    
+  }
+
+  .navbar-toggler{
+      margin-right: 10px;
+  }

@@ -2,14 +2,14 @@
     Version: 1.0
 /****************************************** */
 
-(function($) {
+(function ($) {
     "use strict";
 
     /* ==============================================
     Fixed menu
     =============================================== */
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         if ($(window).scrollTop() > 0) {
             $('.top-navbar').addClass('fixed-menu');
         } else {
@@ -20,7 +20,7 @@
     /* ==============================================
     Back top
     =============================================== */
-    jQuery(window).scroll(function() {
+    jQuery(window).scroll(function () {
         if (jQuery(this).scrollTop() > 1) {
             jQuery('.dmtop').css({
                 bottom: "10px"
@@ -32,11 +32,13 @@
         }
     });
 
+
+
     /* ==============================================
 	Loader -->
 	=============================================== */
 
-    $(window).load(function() {
+    $(window).load(function () {
         $("#preloader").on(500).fadeOut();
         $(".preloader").on(600).fadeOut("slow");
         $('.loader-container').addClass('done');
@@ -50,7 +52,7 @@
 
     if ($('#scroll-to-top').length) {
         var scrollTrigger = 100, // px
-            backToTop = function() {
+            backToTop = function () {
                 var scrollTop = $(window).scrollTop();
                 if (scrollTop > scrollTrigger) {
                     $('#scroll-to-top').addClass('show');
@@ -59,18 +61,18 @@
                 }
             };
         backToTop();
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             backToTop();
         });
 
-        $('#scroll-to-top').on('click', function(e) {
+        $('#scroll-to-top').on('click', function (e) {
             e.preventDefault();
             $('html,body').animate({
                 scrollTop: 0
             }, 700);
         });
 
-        $("#home").on("click", function(e) {
+        $("#home").on("click", function (e) {
             e.preventDefault();
 
             if (!$(window).scrollTop() == 0) {
@@ -81,16 +83,28 @@
         });
     }
 
+    var h = document.documentElement,
+        b = document.body,
+        st = 'scrollTop',
+        sh = 'scrollHeight',
+        progress = document.querySelector('.progress'),
+        scroll;
+
+    document.addEventListener('scroll', function () {
+        scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+        progress.style.setProperty('--scroll', scroll + '%');
+    });
+
 
     /* ==============================================
 		Scroll and navigation functions
     ============================================== */
     var extraOffset;
-    $(".nav-item").click(function(e) {
+    $(".nav-item").click(function (e) {
         e.preventDefault();
 
-        $('.nav-item').removeClass("active");
-        $(this).addClass("active");
+        // $('.nav-item').removeClass("active");
+        // $(this).addClass("active");
 
         if ($(window).scrollTop() < 100) {
             extraOffset = 100;
@@ -103,12 +117,12 @@
         }
 
         var navbar = $("#navbars-host");
-        if (screen.width < 991) {
-            navbar.removeClass("collapse");
-            navbar.removeClass("show");
-            navbar.addClass("collapsing");
-            navbar.addClass("collapse");
-        }
+        // if (screen.width < 991) {
+        //     navbar.removeClass("collapse");
+        //     navbar.removeClass("show");
+        //     navbar.addClass("collapsing");
+        //     navbar.addClass("collapse");
+        // }
         if ($(this).attr("id") != "home") {
             var section = "#" + $(this).attr('id') + "-section";
             $([document.documentElement, document.body]).animate({
@@ -118,7 +132,13 @@
         }
     });
 
-    $(".hover-btn-new").click(function(e) {
+    $(".hamburger--collapse").click(function (e) {
+        $(this).toggleClass("is-active");
+
+    })
+
+
+    $(".hover-btn-new").click(function (e) {
         e.preventDefault();
         if (100 < $(window).scrollTop()) {
             extraOffset = 100;
@@ -134,7 +154,7 @@
         }, 700);
     });
 
-    $(".navbar-brand").on("click", function(e) {
+    $(".navbar-brand").on("click", function (e) {
         e.preventDefault();
 
         if (!$(window).scrollTop() == 0) {
@@ -149,7 +169,7 @@
     var monsternameSection = $("#monstername-section").offset().top - 200;
     var werkwijzeSection = $("#werkwijze-section").offset().top - 200;
     var customParalaxSection = $("#testimonials").offset().top;
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         var scrollTop = $(window).scrollTop();
         var docHeight = $(document).height(),
             scrollPercent;
@@ -189,12 +209,12 @@
         if (current > $this.data('count')) {
             $this.html($this.data('count'));
         } else {
-            setTimeout(function() {
+            setTimeout(function () {
                 count($this)
             }, 30);
         }
     }
-    $(".stat_count, .stat_count_download").each(function() {
+    $(".stat_count, .stat_count_download").each(function () {
         $(this).data('count', parseInt($(this).html(), 10));
         $(this).html('0');
         count($(this));
@@ -215,28 +235,28 @@
     /* ==============================================
      Contact -->
      =============================================== */
-    jQuery(document).ready(function() {
-        $('#contactform').submit(function() {
+    jQuery(document).ready(function () {
+        $('#contactform').submit(function () {
             var action = $(this).attr('action');
-            $("#message").slideUp(750, function() {
+            $("#message").slideUp(750, function () {
                 $('#message').hide();
                 $('#submit')
                     .after('<img src="images/ajax-loader.gif" class="loader" />')
                     .attr('disabled', 'disabled');
                 $.post(action, {
-                        first_name: $('#first_name').val(),
-                        last_name: $('#last_name').val(),
-                        email: $('#email').val(),
-                        phone: $('#phone').val(),
-                        select_service: $('#select_service').val(),
-                        select_price: $('#select_price').val(),
-                        comments: $('#comments').val(),
-                        verify: $('#verify').val()
-                    },
-                    function(data) {
+                    first_name: $('#first_name').val(),
+                    last_name: $('#last_name').val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val(),
+                    select_service: $('#select_service').val(),
+                    select_price: $('#select_price').val(),
+                    comments: $('#comments').val(),
+                    verify: $('#verify').val()
+                },
+                    function (data) {
                         document.getElementById('message').innerHTML = data;
                         $('#message').slideDown('slow');
-                        $('#contactform img.loader').fadeOut('slow', function() {
+                        $('#contactform img.loader').fadeOut('slow', function () {
                             $(this).remove()
                         });
                         $('#submit').removeAttr('disabled');
@@ -252,7 +272,7 @@
      Code Wrapper -->
      =============================================== */
 
-    $('.code-wrapper').on("mousemove", function(e) {
+    $('.code-wrapper').on("mousemove", function (e) {
         var offsets = $(this).offset();
         var fullWidth = $(this).width();
         var mouseX = e.pageX - offsets.left;
@@ -276,7 +296,7 @@
             transition: 'none'
         });
     });
-    $('.divider-wrapper').on("mouseleave", function() {
+    $('.divider-wrapper').on("mouseleave", function () {
         $(this).parent().find('.divider-bar').css({
             left: '50%',
             transition: 'all .3s'

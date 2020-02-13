@@ -28,6 +28,7 @@
 <link rel="stylesheet" href="css/responsive.css">
 <!-- Custom CSS -->
 <link rel="stylesheet" href="css/custom.css">
+<link href="css/hamburger.css" rel="stylesheet">
 
 <!-- Modernizer for Portfolio -->
 <script src="js/modernizer.js"></script>
@@ -35,14 +36,12 @@
 <!-- [if lt IE 9]> -->
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
 <!-- <![endif] -->
 
 </head>
 
 <body class="host_version">
-
-
-
     <!-- LOADER -->
     <div id="preloader">
         <div class="loader-container">
@@ -61,21 +60,24 @@
             <div class="container-fluid navbar-custom">
 
                 <a class="navbar-brand" href="">
-                    <img src="images/logo_rimondia.png" alt="" />
+                    <img class="logo" src="images/rimondia_logo.jpg" alt="" />
                 </a>
-
-                <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button class="hamburger hamburger--collapse" type="button" id="navbar-toggler" class="navbar-toggler"
+                    type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
                 </button>
+
 
                 <div class="collapse navbar-collapse" id="navbars-host">
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active" id="home"><a class="nav-link nav-link-ltr" href="">Home</a></li>
                         <li class="nav-item" id="over-ons"><a class="nav-link nav-link-ltr" href="">Over ons</a></li>
-                        <li class="nav-item" id="monstername"><a class="nav-link nav-link-ltr" href="">Monstername </a></li>
+                        <li class="nav-item" id="monstername"><a class="nav-link nav-link-ltr" href="">Monstername </a>
+                        </li>
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Hosting
                             </a>
@@ -91,24 +93,17 @@
                         <li class="nav-item" id="vacatures"><a class="nav-link nav-link-ltr" href="">Vacatures</a></li>
                         <li class="nav-item" id="contact"><a class="nav-link nav-link-ltr" href="">Contact</a></li>
                     </ul>
-
-
                 </div>
-                <div class="scroll-progress-container">
-                    <div class="scroll-progress"></div>
 
-                </div>
-            </div>
-            <div class="scroll-progress-container">
-                <div class="scroll-progress"></div>
 
             </div>
+            <div class="progress"></div>
         </nav>
 
     </header>
     <!-- End header -->
-
-    <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false">
+    <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel"
+        data-pause="hover" data-interval="false">
         <!-- Indicators -->
 
         <ol class="carousel-indicators">
@@ -125,9 +120,11 @@
                                 <div class="col-md-12 col-sm-12 ">
                                     <div class="big-tagline">
                                         <h2>Rimondia B.V.</h2>
-                                        <p class="lead">Rimondia BV is onderdeel van de Van de Ridder Groep en houd zich bezig met monstername en diagnose, voornamelijk in de agrarische sector.
+                                        <p class="lead">Rimondia BV is onderdeel van de Van de Ridder Groep en houd zich
+                                            bezig met monstername en diagnose, voornamelijk in de agrarische sector.
                                         </p>
-                                        <a href="" class="hover-btn-new" id="contact"><span>Contact </span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="" class="hover-btn-new" id="contact"><span>Contact </span></a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <a href="" class="hover-btn-new" id="over-ons"><span>Over ons</span></a>
                                     </div>
                                 </div>
@@ -148,8 +145,11 @@
                                     <div class="big-tagline">
                                         <h2 data-animation="animated zoomInRight">Find the right
                                             <strong>Hosting</strong></h2>
-                                        <p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p>
-                                        <a href="#" class="hover-btn-new"><span>Contact Us</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive
+                                            landing page template, you can promote your all hosting, domain and email
+                                            services. </p>
+                                        <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <a href="#" class="hover-btn-new"><span>Read More</span></a>
                                     </div>
                                 </div>
@@ -170,8 +170,11 @@
                                     <div class="big-tagline">
                                         <h2 data-animation="animated zoomInRight"><strong>VPS Servers</strong> Company
                                         </h2>
-                                        <p class="lead" data-animation="animated fadeInLeft">1 IP included with each server Your Choice of any OS (CentOS, Windows, Debian, Fedora) FREE Reboots</p>
-                                        <a href="#" class="hover-btn-new"><span>Contact Us</span></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <p class="lead" data-animation="animated fadeInLeft">1 IP included with each
+                                            server Your Choice of any OS (CentOS, Windows, Debian, Fedora) FREE Reboots
+                                        </p>
+                                        <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <a href="#" class="hover-btn-new"><span>Read More</span></a>
                                     </div>
                                 </div>
@@ -211,9 +214,15 @@
                     <div class="message-box">
                         <!-- <h4>2018 BEST WEB HOSTING COMPANY</h4> -->
                         <!-- <h2>Awards Winner Support Center</h2> -->
-                        <p>Al sinds 1992 is monstername een belangrijke specialisatie binnen de Van de Ridder organisatie. Zo belangrijk dat in 2006 is besloten deze specialisatie onder te brengen in een apart onafhankelijk bedrijf onder de naam Rimondia.</p>
-                        <p>In het verleden beperkte de dienstverlening zich tot het nemen van monsters voor de diverse opdrachtgevers, sinds 2006 bieden wij ook mogelijkheden om onderzoeken bij ons onder te brengen. Op deze manier kan Rimondia u een totaal
-                            pakket aanbieden, van planning en organisatie tot de uiteindelijke uitslag van het monster. Hierdoor kunnen wij het complete traject efficiënt uitvoeren en onze opdrachtgevers in een korte tijd van een uitslag en advies voorzien.</p>
+                        <p>Al sinds 1992 is monstername een belangrijke specialisatie binnen de Van de Ridder
+                            organisatie. Zo belangrijk dat in 2006 is besloten deze specialisatie onder te brengen in
+                            een apart onafhankelijk bedrijf onder de naam Rimondia.</p>
+                        <p>In het verleden beperkte de dienstverlening zich tot het nemen van monsters voor de diverse
+                            opdrachtgevers, sinds 2006 bieden wij ook mogelijkheden om onderzoeken bij ons onder te
+                            brengen. Op deze manier kan Rimondia u een totaal
+                            pakket aanbieden, van planning en organisatie tot de uiteindelijke uitslag van het monster.
+                            Hierdoor kunnen wij het complete traject efficiënt uitvoeren en onze opdrachtgevers in een
+                            korte tijd van een uitslag en advies voorzien.</p>
                         <!--   <a href="#" class="hover-btn-new"><span>Learn More</span></a> -->
                     </div>
                     <!-- end messagebox -->
@@ -222,7 +231,8 @@
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="embed-responsive embed-responsive-16by9 wow fadeIn">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/c8KcRWJMLNg?start=4" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/c8KcRWJMLNg?start=4"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
                 <!-- end col -->
@@ -239,7 +249,8 @@
             <div class="section-title row text-left">
                 <div class="col-md-8 offset-md-0">
                     <h3>Monstername</h3>
-                    <p class="lead">Naast het afnemen van bloed uisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam </p>
+                    <p class="lead">Naast het afnemen van bloed uisque eget nisl id nulla sagittis auctor quis id.
+                        Aliquam quis vehicula enim, non aliquam </p>
                 </div>
             </div>
             <!-- end title -->
@@ -256,9 +267,12 @@
                     <div class="message-box">
                         <!-- <h4>2018 BEST WEB HOSTING COMPANY</h4> -->
                         <h2>Bloedafname</h2>
-                        <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
+                        <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam
+                            risus. Sed a tellus quis mi rhoncus dignissim.</p>
 
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis montes, nascetur ridiculus mus. Sed vitae rutrum
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
+                            bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis
+                            montes, nascetur ridiculus mus. Sed vitae rutrum
                             neque. </p>
 
                         <!-- <a href="#" class="hover-btn-new"><span>Learn More</span></a> -->
@@ -273,13 +287,16 @@
                     <div class="message-box">
                         <h2>Overige monsters</h2>
                         <h4 style="color: black">Ruwvoermonster</h4>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
+                            bibendum.
                         </p>
                         <h4 style="color: black">Watermonsters</h4>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
+                            bibendum.
                         </p>
                         <h4 style="color: black">Melkmonsters</h4>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
+                            bibendum.
                         </p>
 
 
@@ -309,7 +326,8 @@
             <div class="section-title row text-left">
                 <div class="col-lg-12 offset-lg-0">
                     <h3>Werkwijze</h3>
-                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                        lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
                 </div>
             </div>
             <!-- end title -->
@@ -403,7 +421,8 @@
         </div> 
     </div>end section -->
     <div class="section cl custom-paralax">
-        <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/busjes_rimondia_dark.png');">
+        <div id="testimonials" class="parallax section db parallax-off"
+            style="background-image:url('images/busjes_rimondia_dark.png');">
             <div class="container-fluid">
 
                 <div class="row text-left stat-wrap">
@@ -442,7 +461,8 @@
         <div class="container-fluid">
             <div class="section-title text-center">
                 <h3>Ready to get started?</h3>
-                <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. </p>
             </div>
 
             <div class="row">
@@ -720,7 +740,8 @@
                         <div class="widget-title">
                             <h3>Over ons</h3>
                         </div>
-                        <p> Rimondia BV is onderdeel van de Van de Ridder Groep en houd zich bezig met monstername en diagnose, voornamelijk in de agrarische sector.
+                        <p> Rimondia BV is onderdeel van de Van de Ridder Groep en houd zich bezig met monstername en
+                            diagnose, voornamelijk in de agrarische sector.
                         </p>
                     </div>
                     <!-- end clearfix -->
@@ -792,7 +813,8 @@
                         <li>
                             <p style="color: white;">Volg ons op facebook! &nbsp; </p>
                         </li>
-                        <li><a target="_blank" href="https://www.facebook.com/Rimondia2015/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/Rimondia2015/"><i
+                                    class="fa fa-facebook"></i></a></li>
 
                     </ul>
                     <!-- end links -->
@@ -812,6 +834,8 @@
     <script src="js/custom.js"></script>
     <script src="js/timeline.min.js"></script>
     <script>
+
+
         timeline(document.querySelectorAll('.timeline'), {
             forceVerticalMode: 700,
             mode: 'horizontal',

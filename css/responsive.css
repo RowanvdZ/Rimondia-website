@@ -471,4 +471,8 @@ body {
     .big-tagline {
         padding: 0px 25px 0px 15px;
     }
+
+    .navbar-nav{
+        padding-top: 10px;
+    }
 }

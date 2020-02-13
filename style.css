@@ -572,7 +572,8 @@ a img.aligncenter {
     display: block;
     line-height: 30px;
     letter-spacing: 1px;
-    margin: 0px 0px 0px 6px
+    margin: 0px 0px 0px 6px;
+    text-align: center;
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item .nav-link::before {

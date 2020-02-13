@@ -70,6 +70,9 @@ body {
 .carousel-inner {
     height: 80%;
 }
+.hamburger{
+    display: none;
+}
 
 @media (min-width: 1199px)and (max-width: 1799) {
     .custom-paralax {
@@ -139,6 +142,9 @@ body {
 .carousel-inner {
     height: 80%;
 }
+.hamburger{
+    display: none;
+}
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .top-navbar .navbar-light .navbar-nav .nav-item {
@@ -153,9 +159,20 @@ body {
     .big-tagline h2 {
         font-size: 40px;
     }
+
+    #navbar-toggler{
+        display: none;
+    }
+
+    .hamburger{
+        display: none;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .hamburger{
+    display: inline-block;
+}
     .custom-paralax {
         padding: 0px;
     }
@@ -174,6 +191,7 @@ body {
     .top-navbar .navbar-light .navbar-nav .nav-item .nav-link::after {
         display: none;
     }
+
     .stat-wrap {
         text-align: center !important;
     }
@@ -357,6 +375,10 @@ body {
 }
 
 @media only screen and (min-width: 280px) and (max-width: 599px) {
+.hamburger{
+    display: inline-block;
+}
+
     .top-navbar .navbar-light .navbar-nav .nav-item {
         padding: 0px;
     }

@@ -554,8 +554,8 @@ a img.aligncenter {
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-link {
-    color: #202020;
-    font-size: 22px;
+    color: #000;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -1447,7 +1447,7 @@ a img.aligncenter {
     text-align: left;
     line-height: 30px;
     font-size: 16px;
-    color: #c2c2c2;
+    color: #333333;
 }
 
 .pricing-table-highlighted h3,
@@ -3115,7 +3115,7 @@ span.m_1 {
     color: #121212;
 }
 
-.customer-box {}
+
 
 .customer-box .nav-tabs {
     border-bottom: none;
@@ -3354,3 +3354,8 @@ h1 {
   .navbar-toggler{
       margin-right: 10px;
   }
+
+  button:focus {
+    outline: 0px dotted;
+     outline: 0px auto white; 
+}

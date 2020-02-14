@@ -102,9 +102,9 @@
     var extraOffset;
     $(".nav-item").click(function (e) {
         e.preventDefault();
-
-        // $('.nav-item').removeClass("active");
-        // $(this).addClass("active");
+        $("#navbars-host").toggleClass("show");
+        $('.nav-item').removeClass("active");
+        $(this).addClass("active");
 
         if ($(window).scrollTop() < 100) {
             extraOffset = 100;

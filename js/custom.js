@@ -10,8 +10,12 @@
     =============================================== */
 
     $(window).on('scroll', function () {
-        if ($(window).scrollTop() > 0) {
+        if ($(window).scrollTop() > 1) {
+            $('header').css('marginTop', "-"+$('.top-navbar').height());
+            
             $('.top-navbar').addClass('fixed-menu');
+          
+            
         } else {
             $('.top-navbar').removeClass('fixed-menu');
         }
@@ -21,7 +25,7 @@
     Back top
     =============================================== */
     jQuery(window).scroll(function () {
-        if (jQuery(this).scrollTop() > 1) {
+        if (jQuery(this).scrollTop() > 0) {
             jQuery('.dmtop').css({
                 bottom: "10px"
             });
@@ -102,9 +106,10 @@
     var extraOffset;
     $(".nav-item").click(function (e) {
         e.preventDefault();
-
-        // $('.nav-item').removeClass("active");
-        // $(this).addClass("active");
+        $(".hamburger--collapse").toggleClass("is-active");
+        $("#navbars-host").toggleClass("show");
+        $('.nav-item').removeClass("active");
+        $(this).addClass("active");
 
         if ($(window).scrollTop() < 100) {
             extraOffset = 100;
@@ -134,7 +139,7 @@
 
     $(".hamburger--collapse").click(function (e) {
         $(this).toggleClass("is-active");
-
+        
     })
 
 
@@ -167,14 +172,15 @@
     var navItem = $(".nav-item");
     var overOnsSection = $("#over-ons-section").offset().top - 200;
     var monsternameSection = $("#monstername-section").offset().top - 200;
-    var werkwijzeSection = $("#werkwijze-section").offset().top - 200;
+    var werkwijzeSection = $("#werkwijze-section").offset().top - 300;
+    var vacaturesSection = $('#vacatures-section').offset().top -1000;
     var customParalaxSection = $("#testimonials").offset().top;
     $(window).on('scroll', function () {
         var scrollTop = $(window).scrollTop();
-        var docHeight = $(document).height(),
-            scrollPercent;
-
-        scrollPercent = ($(window).scrollTop() / docHeight) * 100;
+        var docHeight = $(document).height();
+        var scrollPercent = ($(window).scrollTop() / docHeight) * 100;
+        
+       
 
         $('.scroll-progress').width(scrollPercent + '%');
 
@@ -194,6 +200,10 @@
             if (scrollTop > werkwijzeSection) {
                 navItem.removeClass("active");
                 $("#werkwijze").addClass("active");
+            }
+            if (scrollTop > vacaturesSection) {
+                navItem.removeClass("active");
+                $("#vacatures").addClass("active");
             }
         }
     })

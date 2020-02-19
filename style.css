@@ -23,6 +23,7 @@
 
 :root {
     --main-color: #6d1874;
+    
 }
 
 body {
@@ -583,6 +584,7 @@ a img.aligncenter {
     bottom: auto;
     top: 37px;
     width: 50px;
+    
     height: 2px;
     border-radius: 50px;
     opacity: 0;
@@ -642,7 +644,7 @@ a img.aligncenter {
     pointer-events: none;
 }
 
-.top-navbar.fixed-menu .bg-light {
+.top-navbar.fixed-menu  {
     position: fixed;
     top: 0;
     width: 100%;

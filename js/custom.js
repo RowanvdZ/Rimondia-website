@@ -11,13 +11,14 @@
 
     $(window).on('scroll', function () {
         if ($(window).scrollTop() > 1) {
-            $('header').css('marginTop', "-"+$('.top-navbar').height());
-            
+
+            var bit = $('.top-navbar').outerHeight();
             $('.top-navbar').addClass('fixed-menu');
-          
-            
+            $('body').css('margin-top', bit);
+
         } else {
             $('.top-navbar').removeClass('fixed-menu');
+            $('body').css('margin-top', 0);
         }
     });
 
@@ -139,7 +140,7 @@
 
     $(".hamburger--collapse").click(function (e) {
         $(this).toggleClass("is-active");
-        
+
     })
 
 
@@ -173,14 +174,14 @@
     var overOnsSection = $("#over-ons-section").offset().top - 200;
     var monsternameSection = $("#monstername-section").offset().top - 200;
     var werkwijzeSection = $("#werkwijze-section").offset().top - 300;
-    var vacaturesSection = $('#vacatures-section').offset().top -1000;
+    var vacaturesSection = $('#vacatures-section').offset().top - 1000;
     var customParalaxSection = $("#testimonials").offset().top;
     $(window).on('scroll', function () {
         var scrollTop = $(window).scrollTop();
         var docHeight = $(document).height();
         var scrollPercent = ($(window).scrollTop() / docHeight) * 100;
-        
-       
+
+
 
         $('.scroll-progress').width(scrollPercent + '%');
 

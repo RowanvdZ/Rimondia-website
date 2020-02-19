@@ -421,6 +421,9 @@ a img.aligncenter {
   z-index: -1;
   transform-origin: center;
 } */
+.top-navbar.fixed-menu{
+    -webkit-backface-visibility: hidden;
+}
 
 .progress-br.done .progress__item {
     opacity: 0;
@@ -489,6 +492,7 @@ a img.aligncenter {
 
 .navbar {
     border-bottom: 1px solid #BBBBBB;
+    
 }
 
 .nav-link {
